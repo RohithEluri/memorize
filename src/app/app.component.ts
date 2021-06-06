@@ -33,8 +33,8 @@ export class AppComponent {
     }
     this.matchedAudio = new Audio();
     this.completedAudio = new Audio();
-    this.matchedAudio.src = '../assets/audio/successful-tone.mp3';
-    this.completedAudio.src = '../assets/audio/successful-tone.mp3';
+    this.matchedAudio.src = './assets/audio/successful-tone.mp3';
+    this.completedAudio.src = './assets/audio/successful-tone.mp3';
     this.matchedAudio.load();
     this.completedAudio.load();
   }
