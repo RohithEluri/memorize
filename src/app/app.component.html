@@ -1,6 +1,12 @@
 <div class="body">
-  <img src="./assets/images/icons8-red-card-80.png" />
-  <label *ngIf="!gameCompleted">{{duration}}</label>
+  <div class="head">
+    <img src="./assets/images/icons8-red-card-80.png" />
+    <label>Memorize</label>
+  </div>
+  <div class="actions" *ngIf="startTime && !gameCompleted">
+    <label>{{duration}}</label>
+    <img src="./assets/images/repeat.png" class="reset" (click)="resetGame()">
+  </div>
   <div class="container" *ngIf="!gameCompleted">
     <section *ngFor="let card of cards">
       <div class="card" [ngClass]="{'card-outline': card.reveal, 'card-matched': card.matched }" (click)="touch(card)">

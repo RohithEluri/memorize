@@ -10,7 +10,7 @@ export class AppComponent {
   cards: any = [];
   firstCard: any;
   secondCard: any;
-  numberOfCards: number = 24;
+  numberOfCards: number = 20;
   startTime: any;
   duration: any;
   intervalCal: any;
@@ -98,8 +98,9 @@ export class AppComponent {
 
   resetGame() {
     this.gameCompleted = false;
-    this.startTime = undefined;
-    this.duration = '00 : 00';
+    this.firstCard = this.secondCard = this.startTime = undefined;
     this.prepareLayout();
+    this.duration = '00 : 00';
+    clearInterval(this.intervalCal);
   }
 }
